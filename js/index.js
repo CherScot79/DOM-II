@@ -53,3 +53,12 @@ img.addEventListener('drag', e => {
 img.addEventListener('mouseleave', e => {
     img.src = "https://github.com/CherScot79/DOM-II/blob/Cheree-Scott/img/fun-bus.jpg"
 })
+
+const preventA = document.querySelectorAll("a");
+
+preventA.forEach(function(a) {
+  a.addEventListener("click", function(event) {
+    event.preventDefault();
+    event.stopPropagation();
+  });
+});
