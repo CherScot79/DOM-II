@@ -34,10 +34,22 @@ document.querySelector('nav').addEventListener('click', function(event) {
 });
 
 const header = document.querySelector('.logo-heading')
-console.log(header)
 header.addEventListener('mouseenter', e =>{
     header.style.color = 'teal'
 })
 header.addEventListener('mouseleave', e =>{
     header.style.color = 'black'
+})
+
+let img = document.querySelector('img')
+img.addEventListener('mouseenter', e => {
+    img.src = "https://media0.giphy.com/media/3BMsdRXVELShWzUcXj/giphy.gif"
+})
+
+img.addEventListener('drag', e => {
+    img.src = "https://frogblogmanchester.files.wordpress.com/2014/04/agalychnis-annae.jpg"
+})
+
+img.addEventListener('mouseleave', e => {
+    img.src = "https://github.com/CherScot79/DOM-II/blob/Cheree-Scott/img/fun-bus.jpg"
 })
